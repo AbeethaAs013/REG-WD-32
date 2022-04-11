@@ -12,9 +12,6 @@ const getAllProducts = () =>async (req, res) => {
 }
 
 
-
-
-
 const getproductById = () =>async (req, res) => {
     try {
         const product = await product.findById(req.params.id);
@@ -25,7 +22,6 @@ const getproductById = () =>async (req, res) => {
         res.status(500).json({message:"Server Error"});
     }
 }
-
 
 
 module.exports = {

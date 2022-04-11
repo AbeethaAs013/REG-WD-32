@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 //Screens
 
@@ -21,14 +21,15 @@ function App() {
   return (
     <Router>
       <Navbar click={() => setsideToggle(true)}/>
-      <SideDrawer show={sideToggle}/>
+      <SideDrawer show={sideToggle} click={() => setsideToggle(false)}/>
       <Backdrop show={sideToggle} click={() => setsideToggle(false)}/>
+      
       <main>
-        <Routes>
+        <Switch>
           <Route exact path="/" component={HomeScreen}/>
           <Route exact path="/product/:id" component={ProductScreen}/>
           <Route exact path="/cart" component={CartScreen}/>
-        </Routes>
+        </Switch>
       </main>
       
       </Router>
