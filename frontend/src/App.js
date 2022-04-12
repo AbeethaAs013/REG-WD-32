@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 //Screens
 
@@ -25,11 +25,11 @@ function App() {
       <Backdrop show={sideToggle} click={() => setsideToggle(false)}/>
       
       <main>
-        <Switch>
-          <Route exact path="/" component={HomeScreen}/>
-          <Route exact path="/product/:id" component={ProductScreen}/>
-          <Route exact path="/cart" component={CartScreen}/>
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<HomeScreen/>}/>
+          <Route exact path="/product/:id" element={<ProductScreen/>}/>
+          <Route exact path="/cart" element={<CartScreen/>}/>
+        </Routes>
       </main>
       
       </Router>
