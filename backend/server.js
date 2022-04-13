@@ -1,33 +1,40 @@
-const express = require("express");  // variable declaration 
+const express = require("express");
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");  
-const cors = require( "cors");
-const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+
+
 const app = express();
-require("dotenv").config();
 
-//server connection
+//import routes
+const postRoutes =require('./routes/posts');
 
-const PORT = process.env.PORT || 8070; // port when running in the computer , ||  logical OR
 
-app.use(cors());
+//app middleware
 app.use(bodyParser.json());
+app.use(cors());
 
-const URL = process.env.MONGODB_URL; // DB connection
+//route middleware
+app.use(postRoutes);
 
-mongoose.connect(URL, {
-//useCreateIndex : true,
-//useNewUrlParser : true,
-useUnifiedTopology: true,
-//useFindAndModify : false
+
+//declare the sever port
+
+const PORT = 8000;
+
+//DB connection
+const DB_URL="mongodb+srv://pavi:0006@cluster0.sygep.mongodb.net/REG_WD_32?retryWrites=true&w=majority";
+
+mongoose.connect(DB_URL)
+.then (()=>{
+    console.log("DB connection succesfull");
 
 })
+.catch((err)=> console.log("DB connection error",err));
 
-// connection
-const connection = mongoose.connection;
-connection.once("open",()=> {   // arrow functions in JS (readbility)
-console.log("Mongodb Connection Success");
+
+app.listen(PORT,()=>{
+    console.log(`App is running on ${PORT}`);
 
 })
-app.listen(PORT, () => console.log(`server running on port ${PORT}`));
-
