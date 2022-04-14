@@ -1,7 +1,7 @@
 import "./ProductScreen.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 // Actions
 
@@ -29,8 +29,11 @@ const ProductScreen = ({match, history}) => {
   }, [dispatch, product, match]);
 
 
-  
-  
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty));
+    history.push("/cart");
+  }; 
   
   
   
@@ -75,13 +78,15 @@ const ProductScreen = ({match, history}) => {
             Qty:
             <select value={qty} onChange={(e) =>setQty(e.target.value)}>
               {[...Array(product.countInStock).keys()].map((x) => (
-                <option key={x+1} value={x+1}>{x+1}</option>
+                <option key={x+1} value={x+1}>
+                  {x+1}
+                </option>
               ))}
               
             </select>
           </p>
           <p>
-            <button type="button">Add To Cart</button>
+            <button type="button" onClick={addToCartHandler}> Add To Cart </button>
           </p>
         </div>
       </div>
