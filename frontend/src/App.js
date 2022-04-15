@@ -1,12 +1,17 @@
 
-import './App.css';
+
 import Header from './components/Header';
+import AddPickup from './components/AddPickup';
+
+
 
 function App() {
   return (
     <div>
       <Header/>
-    </div>
+      <AddPickup/>
+      
+      </div>
   );
 }
 
