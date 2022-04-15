@@ -13,7 +13,7 @@ const postRoutes =require('./routes/posts');
 
 //app middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors());// to run the port in the same sever
 
 //route middleware
 app.use(postRoutes);
