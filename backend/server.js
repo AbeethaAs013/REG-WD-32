@@ -23,7 +23,7 @@ app.use(postRoutes);
 
 const PORT = 8000;
 
-//DB connection
+//monogo DB connection
 const DB_URL="mongodb+srv://pavi:0006@cluster0.sygep.mongodb.net/REG_WD_32?retryWrites=true&w=majority";
 
 mongoose.connect(DB_URL)
