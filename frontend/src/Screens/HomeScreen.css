@@ -4,10 +4,15 @@
 }
 
 .homescreen__title {
+    text-align: center;
     font-size: 1.5rem;
     color: #171717;
     margin-bottom: 1rem;
     margin-left: 8px;
+}
+
+.homescreen__title1 {
+    text-align: center;
 }
 
 .homescreen__products {

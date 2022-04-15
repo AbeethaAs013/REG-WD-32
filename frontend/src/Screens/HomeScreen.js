@@ -20,7 +20,12 @@ const HomeScreen = () => {
 
   return (
   <div className="homescreen">
-    <h2 className="homescreen__title">Latest Products</h2>
+    <h2 className="homescreen__title">...Sell Or Buy In One Place...<br></br>
+    </h2>
+    <h3 className="homescreen__title1">Wave spare parts are one of the famous brand in Sri Lanka under more than 25 years.<br></br>
+    anyway you can trust our service and use it.</h3><br></br>
+    
+
     
     <div className="homescreen__products">
     {loading ? (
