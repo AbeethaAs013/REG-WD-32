@@ -22,8 +22,11 @@ const HomeScreen = () => {
   <div className="homescreen">
     <h2 className="homescreen__title">...Sell Or Buy In One Place...<br></br>
     </h2>
-    <h3 className="homescreen__title1">Wave spare parts are one of the famous brand in Sri Lanka under more than 25 years.<br></br>
-    anyway you can trust our service and use it.</h3><br></br>
+    <h4 className="homescreen__title1">Wave spare parts are one of the famous brand in Sri Lanka under more than 25 years.<br></br>
+    anyway you can trust our service and use it.<br></br><br></br></h4>
+    <h3 className="homescreen__title2">You can buy any spare parts<br></br><br></br>
+    Shop Now </h3><br></br>
+    
     
 
     

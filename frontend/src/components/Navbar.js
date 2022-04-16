@@ -1,5 +1,6 @@
 import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 const Navbar = ({click}) => {
@@ -8,11 +9,45 @@ const Navbar = ({click}) => {
         {/* logo */}
 
     <div className="navbar_logo">
-        <h2>Mern shopping cart</h2>
+    <i className="fas fa-shopping-cart"></i>
+        <h2>Wave Spare Parts</h2>
     </div>
 
   
     <ul className="navbar_links">
+
+    <li>
+        <Link to="">
+          Home &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </Link>
+        </li>
+
+        <li>
+        <Link to="/">
+        &nbsp;&nbsp;products &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </Link>
+        </li>
+
+        <li>
+        <Link to="/">
+        &nbsp;&nbsp;About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </Link>
+        </li>
+       
+        <li>
+        <Link to="/">
+        &nbsp;&nbsp;Contact Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </Link>
+        </li>
+
+        <li>
+        <Link to="/">
+        &nbsp;&nbsp;FAQ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+        </Link>
+        </li>
+
+
+        
         <li>
         <Link to="/cart" className="cart__link">
         <i className="fas fa-shopping-cart"></i>
@@ -24,21 +59,20 @@ const Navbar = ({click}) => {
         </Link>
         </li>
 
+</ul>
 
-        <li>
-        <Link to="/">
-          Shop
-        </Link>
-        </li>
-        </ul>
+
+  <Link to="" className="pro__icon">       
+<i class="fa-solid fa-user-large"></i>
+</Link>
 
  
 
-    <div className="hamburger__menu" onClick={click}>
+    {/* <div className="hamburger__menu" onClick={click}>
         <div></div>
         <div></div>
         <div></div>
-    </div>
+    </div> */}
 
     </nav>
   )

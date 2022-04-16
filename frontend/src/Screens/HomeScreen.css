@@ -15,6 +15,10 @@
     text-align: center;
 }
 
+.homescreen__title2 {
+    text-align: center;
+}
+
 .homescreen__products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

@@ -1,6 +1,6 @@
 .navbar {
     width: 100%;
-    background-color: #171717;
+    background-color: #1be9df;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,16 @@
     align-items: center;
     text-align: center;
     font-size: 1rem;
+}
+
+.pro__icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+    color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
