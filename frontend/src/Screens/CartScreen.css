@@ -2,10 +2,12 @@
     display: flex;
     max-width: 1300px;
     margin: 2rem auto;
+    background:linear-gradient(to bottom, #fff, #6de7fa);
   }
   
   .cartscreen h2 {
     margin-bottom: 1rem;
+    text-align: center;
   }
   
   .cartscreen__left {
@@ -45,6 +47,8 @@
 
   .cartscreen__right div button {
     padding: 10px 17px;
+    margin-top:  1rem;
+    flex: 0.7;
     width: 100%;
     background-color: #171717;
     color: #f4f4f4;

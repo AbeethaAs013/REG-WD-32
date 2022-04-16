@@ -1,6 +1,6 @@
 .navbar {
     width: 100%;
-    background-color: #1be9df;
+    background:linear-gradient(to top, #fff, #6de7fa);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +8,13 @@
     z-index: 50;
 }
 
+.navbar_logo {
+    width: 6%;
+    height: 3%;
+}
+
 .navbar_logo h2 {
-    color: #f4f4f4;
+    color: black;
     font-size: 1.4rem;
     cursor: pointer;
 }
@@ -24,9 +29,15 @@
     padding-left: 1.5rem;
 }
 
+.wave_name{
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
 .navbar_links > li > a {
     text-decoration: none;
-    color: #f4f4f4;
+    color: gray;
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -45,9 +56,10 @@
 }
 
 .cart__link:hover {
-    background: #dd219e;
-    color: #f4f4f4;
+    background: blue;
+    color: #ffffff;
 }
+
 
 .cartlogo__badge {
     width: 30px;
@@ -64,13 +76,13 @@
 }
 
 .pro__icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 8px;
+    width: 3%;
+    height: 3%;
+    /* margin-left: 8px;
     color: #171717;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 

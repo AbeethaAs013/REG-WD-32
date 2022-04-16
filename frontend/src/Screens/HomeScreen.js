@@ -19,7 +19,7 @@ const HomeScreen = () => {
   }, [dispatch]);
 
   return (
-  <div className="homescreen">
+  <div className="homescreen"><br></br>
     <h2 className="homescreen__title">...Sell Or Buy In One Place...<br></br>
     </h2>
     <h4 className="homescreen__title1">Wave spare parts are one of the famous brand in Sri Lanka under more than 25 years.<br></br>

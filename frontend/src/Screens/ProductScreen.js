@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 // Actions
 
 import { getProductDetails } from "../redux/actions/productActions"; 
-//import { addToCart } from "../redux/actions/cartActions";
+import { addToCart } from "../redux/actions/cartActions";
  
 
 const ProductScreen = ({match, history}) => {
@@ -30,18 +30,23 @@ const ProductScreen = ({match, history}) => {
   }, [dispatch, product, match]);
 
 
-let navigate = useNavigate();
+  let navigate = useNavigate();
 
-  const addToCartHandler = () => {
-    navigate(`/cart/${product._id} ? qty=${qty}`);
-  }; 
+//   const addToCartHandler = () => {
+//     navigate(`/cart${product._id} ? qty=${qty}`);
+//   }; 
   
+const addToCartHandler = () => {
+  dispatch(addToCart(product._id, qty));
+  //history.push("/cart");
+  navigate("/cart");
+}
   
   
   
   console.log(product);
   return (
-    <div className="productScreen">
+    <div className="productscreen_1">
       {loading ? (
         <h2>Loading...</h2>
         ) : error ? (
@@ -79,7 +84,7 @@ let navigate = useNavigate();
             Qty:
             <select value={qty} onChange={(e) =>setQty(e.target.value)}>
               {[...Array(product.countInStock).keys()].map((x) => (
-                <option key={x+1} value={x+1}>
+                <option key={x + 1} value={x + 1}>
                   {x+1}
                 </option>
               ))}
