@@ -3,12 +3,15 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+//import { ToastContainer, toast } from "react-toastify";
 
 // Actions
 
 import { getProductDetails } from "../redux/actions/productActions"; 
 import { addToCart } from "../redux/actions/cartActions";
- 
+
+
+//toast.configure();
 
 const ProductScreen = ({match, history}) => {
 
@@ -38,6 +41,7 @@ const ProductScreen = ({match, history}) => {
   
 const addToCartHandler = () => {
   dispatch(addToCart(product._id, qty));
+  //toast.success("Item ADD To Cart",{position:toast.POSITION.TOP_CENTER});
   //history.push("/cart");
   navigate("/cart");
 }
@@ -101,6 +105,5 @@ const addToCartHandler = () => {
   </div>
   );
 };
-
 
 export default ProductScreen;
