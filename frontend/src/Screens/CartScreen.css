@@ -6,8 +6,10 @@
   }
   
   .cartscreen h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
   
   .cartscreen__left {
@@ -15,13 +17,14 @@
     margin-right: 1rem;
     background: transparent;
     padding: 1rem;
+    font-weight: bold;
   }
   
   .cartscreen__right {
     flex: 0.3;
     background: #fff;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    height: fit-content;
+    box-shadow: 0 1px 4px rgba(111, 116, 43, 0.4);
+    height:auto;
   }
   
   .cartscreen__right div {

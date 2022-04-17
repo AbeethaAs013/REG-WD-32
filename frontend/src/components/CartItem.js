@@ -25,7 +25,6 @@ const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
           </option>
         ))}
     </select>
-
     <button className="cartitem__deleteBtn" onClick={() => removeHandler(item.product)}>
         <i className="fas fa-trash"></i>
     </button>

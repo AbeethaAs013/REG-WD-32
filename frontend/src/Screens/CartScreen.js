@@ -1,7 +1,7 @@
 import './CartScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
-import { toast } from 'react-toastify';
+//import { toast } from 'react-toastify';
 
 //components
 import CartItem from "../components/CartItem";
@@ -60,6 +60,7 @@ const CartScreen = () => {
       </div>
       <div>
         <button>Proceed To Checkout</button>
+
       </div>
     </div>
   </div>
