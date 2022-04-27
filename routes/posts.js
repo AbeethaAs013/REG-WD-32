@@ -40,6 +40,24 @@ router.get('/posts',(req,res)=>{
 
     });
 });
+<<<<<<< Updated upstream
+=======
+// get a specific product detail
+router.get("/post/:id",(req,res)=>{
+     let postID = req.params.id;
+
+     Posts.findById(postID,(err,post)=>{
+         if(err){
+             return res.status(400).json({success:false, err})
+         }
+         return res.status(200).json({
+            success:true,
+            post
+         });
+     });
+})
+
+>>>>>>> Stashed changes
 
 //update function
 
