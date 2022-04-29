@@ -1,11 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-<<<<<<< Updated upstream
-=======
 const cors = require("cors");
 
->>>>>>> Stashed changes
  
 
 
@@ -17,11 +14,8 @@ const postRoutes =require('./routes/posts');
 
 //app middleware
 app.use(bodyParser.json());
-<<<<<<< Updated upstream
-=======
 app.use(cors());
 
->>>>>>> Stashed changes
  
 //route middleware
 app.use(postRoutes);

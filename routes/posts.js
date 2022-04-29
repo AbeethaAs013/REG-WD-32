@@ -40,8 +40,6 @@ router.get('/posts',(req,res)=>{
 
     });
 });
-<<<<<<< Updated upstream
-=======
 // get a specific product detail
 router.get("/post/:id",(req,res)=>{
      let postID = req.params.id;
@@ -57,7 +55,6 @@ router.get("/post/:id",(req,res)=>{
      });
 })
 
->>>>>>> Stashed changes
 
 //update function
 
