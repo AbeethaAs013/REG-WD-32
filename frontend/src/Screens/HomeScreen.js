@@ -17,6 +17,7 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+  
 
   return (
   <div className="homescreen"><br></br>
@@ -27,7 +28,7 @@ const HomeScreen = () => {
     <h3 className="homescreen__title2">You can buy any spare parts<br></br><br></br>
     Shop Now </h3><br></br>
     
-    
+
 
     
     <div className="homescreen__products">

@@ -14,10 +14,21 @@ import Navbar  from './components/Navbar';
 import Backdrop from './components/Backdrop';
 import SideDrawer from './components/SideDrawer';
 import Footer from './components/Footer';
+import Product from './components/Product';
 
 function App() {
 
   const [sideToggle, setsideToggle] = useState(false);
+  // const [searchTerm, setSearchTerm] = useState("");
+  // const [searchResults, setSearchResults] = useState([]);
+  // const searchHandler = (searchTerm) => {
+  //   setSearchTerm(searchTerm);
+  //   if (searchTerm !== ""){
+  //     const newProducts = Products.filter((Product) => {
+  //         console.log(Object.values(Product));
+  //     }); 
+  //   }
+  // };
 
   return (
     <Router>

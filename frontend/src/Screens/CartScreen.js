@@ -2,6 +2,7 @@ import './CartScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 //import { toast } from 'react-toastify';
+//import ReactToPrint from 'react-to-print';
 
 //components
 import CartItem from "../components/CartItem";
@@ -34,9 +35,11 @@ const CartScreen = () => {
     return cartItems.reduce ((price, item) => (item.price * item.qty) + price, 0);
   };
 
-  return (
+  return ( 
+                      
   <div className="cartscreen">
-    <div className="cartscreen__left">
+
+  <div className="cartscreen__left">
       <h2>Shopping Cart</h2>
 
       {cartItems.length === 0 ? (
@@ -52,6 +55,8 @@ const CartScreen = () => {
         removeHandler={removeHandler}/>)
       )}
 
+
+
     </div>
     <div className="cartscreen__right">
       <div className="cartscreen__info">
@@ -60,10 +65,11 @@ const CartScreen = () => {
       </div>
       <div>
         <button>Proceed To Checkout</button>
-
+  
       </div>
     </div>
-  </div>
+    </div>
+
   
 );
 };

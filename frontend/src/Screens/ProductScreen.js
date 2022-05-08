@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-//import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
 
 // Actions
 
@@ -12,6 +12,11 @@ import { addToCart } from "../redux/actions/cartActions";
 
 
 //toast.configure();
+
+const showToast = () => {
+  toast("I am Tostify!")
+};
+
 
 const ProductScreen = ({match, history}) => {
 
@@ -35,9 +40,9 @@ const ProductScreen = ({match, history}) => {
 
   let navigate = useNavigate();
 
-//   const addToCartHandler = () => {
-//     navigate(`/cart${product._id} ? qty=${qty}`);
-//   }; 
+  // const addToCartHandler = () => {
+  //   navigate(`/cart${product._id} ? qty=${qty}`);
+  // }; 
   
 const addToCartHandler = () => {
   dispatch(addToCart(product._id, qty));
@@ -96,7 +101,8 @@ const addToCartHandler = () => {
             </select>
           </p>
           <p>
-            <button type="button" onClick={addToCartHandler}> Add To Cart </button>
+            <button type="button" onClick={addToCartHandler}>Add To Cart </button>
+            <ToastContainer />
           </p>
         </div>
       </div>
