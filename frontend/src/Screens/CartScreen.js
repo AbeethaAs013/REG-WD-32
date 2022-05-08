@@ -2,13 +2,18 @@ import './CartScreen.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 //import { toast } from 'react-toastify';
-//import ReactToPrint from 'react-to-print';
+import ReactToPrint from 'react-to-print';
+//import React, { useRef } from 'react';
 
 //components
 import CartItem from "../components/CartItem";
 
+
+// import { ComponentToPrint } from "../Screens/ComponentToPrint";
+
 // Actions
 import { addToCart, removeFromCart } from '../redux/actions/cartActions';
+// import { render } from 'express/lib/response';
 
 const CartScreen = () => {
 
@@ -35,6 +40,14 @@ const CartScreen = () => {
     return cartItems.reduce ((price, item) => (item.price * item.qty) + price, 0);
   };
 
+
+  // const Example = () => {
+  //   const componentRef = useRef();
+  //   const handlePrint = useReactToPrint({
+  //     content: () => componentRef.current,
+  //   });
+
+  
   return ( 
                       
   <div className="cartscreen">
@@ -55,7 +68,19 @@ const CartScreen = () => {
         removeHandler={removeHandler}/>)
       )}
 
+      <div>
+          <br/>
+              <ReactToPrint
+                  trigger={() => <button style={{ padding: '10px 17px', flex: '0.7',   border: '1px solid #171717', cursor: 'pointer', opacity: '0.9', marginRight:'10px',textDecoration:'none',color:'black'}} className="generateReport1 btn btn-info btn-lg" type="button"><i class="far fa-file-alt" aria-hidden="true"></i> 
+                 &nbsp; Generate Report
+                        </button>}
+                              content={() => this.componentRef}
+              />
+          <br/>
+      </div>
 
+
+                    
 
     </div>
     <div className="cartscreen__right">
@@ -65,13 +90,20 @@ const CartScreen = () => {
       </div>
       <div>
         <button>Proceed To Checkout</button>
+
+
+        {/* <div>
+      <ComponentToPrint ref={componentRef} />
+      <button onClick={handlePrint}>Print this out!</button>
+    </div> */}
   
       </div>
     </div>
     </div>
-
   
-);
-};
+  ); 
+      };
+
+// render(<Example />, document.querySelector("#root"));
 
 export default CartScreen;

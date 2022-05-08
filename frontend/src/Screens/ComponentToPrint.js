@@ -1,9 +1,7 @@
-// import React from 'react';
+import React from 'react';
 
-// export const ComponentToPrint = React.forwardRef((props, ref) => {
-//     return (
-//       <div ref={ref}>My cool content here!</div>
-//     );
-//   });
-
-// export default ComponentToPrint;
+export const ComponentToPrint = React.forwardRef((props, ref) => {
+    return (
+      <div ref={ref}>My cool content here!</div>
+    );
+  });
