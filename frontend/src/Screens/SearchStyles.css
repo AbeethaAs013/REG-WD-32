@@ -1,0 +1,29 @@
+.templateContainer {
+    margin: 5% 0;
+}
+
+.templateContainer > .searchinput_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.templateContainer > .searchinput_Container input {
+    width: 50%;
+    padding: 10px;
+    outline: none;
+}
+
+.templateContainer .searchinput_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.templateContainer .searchinput_Container .template {
+    background-color: bisque;
+    margin: 30px;
+    padding: 0px 20px;
+}

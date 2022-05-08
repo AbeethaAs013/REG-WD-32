@@ -1,6 +1,8 @@
 import "./HomeScreen.css";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import "./SearchStyles.css";
+
 
 // Components
 import Product from "../components/Product";
@@ -17,6 +19,10 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
+
+
+
+  // const [searchTerm, setSearchTerm] = useState("");
   
 
   return (
@@ -28,6 +34,33 @@ const HomeScreen = () => {
     <h3 className="homescreen__title2">You can buy any spare parts<br></br><br></br>
     Shop Now </h3><br></br>
     
+
+    <div className="templateContainer">
+      <div className="searchinput_Container">
+        <input id="searchInput" type="text" placeholder="Search here..."/>
+      </div>
+      <div className="template_Container">
+        {/* {
+          data
+            .filter((val) => {
+              if(searchTerm == ""){
+                return val;
+              } else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+                return val;
+              }
+            })
+            .map((val) => {
+              return (
+                <div className="template" key={val.id}>
+                  <img src={val.imageUrl} alt="" />
+                  <h3>{val.title}</h3>
+                  </div>
+              )
+            }) */}
+        {/* } */}
+      </div>
+    </div>
+
 
 
     
