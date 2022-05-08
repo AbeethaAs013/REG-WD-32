@@ -7,6 +7,18 @@ function Cards() {
     
     <div className='cards'>
       <h1>Choose Your Products</h1>
+      
+      
+      <div className="col-lg-3 mt-2 mb-2">
+            <input
+              className="form-control"
+              type="search"
+              placeholder="Search"
+              name="searchTerm"
+              // onChange={this.handleTextSearch}
+            ></input>
+            </div>
+
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
