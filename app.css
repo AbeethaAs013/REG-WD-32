@@ -1,0 +1,12 @@
+p {
+  
+   
+  text-align: center;
+}
+
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
